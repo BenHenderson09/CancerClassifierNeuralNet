@@ -4,6 +4,24 @@ The algorithm determines cancer cells as benign (not dangerous) or malignant (da
 pattern of how the properties of cancerous cells can be classified as being harmful. Neural networks and machine learning in general
 are making amazing advancements, they are even used in medical scenarios in the real world.
 
+### Data Format
+```
+Attribute                     Domain
+--------------------------------------------
+1. Clump Thickness               1 - 10
+2. Uniformity of Cell Size       1 - 10
+3. Uniformity of Cell Shape      1 - 10
+4. Marginal Adhesion             1 - 10
+5. Single Epithelial Cell Size   1 - 10
+6. Bare Nuclei                   1 - 10
+7. Bland Chromatin               1 - 10
+8. Normal Nucleoli               1 - 10
+9. Mitoses                       1 - 10
+
+ Output                        Domain
+---------------------------------------------
+Class:         (0 for benign, 1 for malignant)
+```
 
 ### Program details:
 - The classifier is coded completely from scratch apart from the use of the OML Matrix operation library
