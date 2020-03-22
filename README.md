@@ -1,8 +1,7 @@
 # CancerClassifierNeuralNet
-This program is a neural network algorithm, tailored to detect dangerous cancer cells based on the properties of that cell.
+This program is a neural network algorithm, tailored to detect dangerous cancer cells based on the properties of those cells.
 The algorithm determines cancer cells as benign (not dangerous) or malignant (dangerous). This gives us an insight into the
-pattern of how the properties of cancerous cells can be classified as being harmful. Neural networks and machine learning in general
-are making amazing advancements, they are even used in medical scenarios in the real world.
+pattern of how the properties of cancerous cells can be classified as being harmful.
 
 ### Data Format
 ```
@@ -24,8 +23,8 @@ Class:         (0 for benign, 1 for malignant)
 ```
 
 ### Program details:
-- The classifier is coded completely from scratch apart from the use of the OML Matrix operation library
-that I created myself (from scratch). It can be seen [here](https://github.com/BenHenderson09/OpenMatrixLib).
+- The classifier is coded from scratch apart from the use of the OML Matrix operation library
+I made. It can be seen [here](https://github.com/BenHenderson09/OpenMatrixLib).
 
 - The program uses Java, it is a good mix of usability and speed, great for neural networks.
 
@@ -60,53 +59,8 @@ class. The neural network is structured in the "Network" class, it feeds the inp
 performs backpropagation to adjust the weight values. These weight values are the key to how neural networks function.
 
 Hyper parameters are defined in the "Main" class. Currently, with 300 hidden nodes and 70,000 iterations it will take a few
-hours to train our network. These parameters can be adjusted to your specification and are almost definitely not the best 
-combination of values to find the lowest error. The "Main" class looks like this:
-
-```Java
-package com.company;
-
-import com.company.Matrix;
-
-public class Main {
-
-    public static void main(String[] args) {
-        // Define hyper parameters
-        double learningRate;
-        int iterations;
-        int hiddenLayerNodes;
-
-        // Define training examples
-        Dataset data = new Dataset();
-        Matrix trainingInputs;
-        Matrix trainingOutputs;
-
-	    // Initialize hyper parameters (you can tune these to minimise error)
-        learningRate     = 0.005;
-        iterations       = 70000;
-        hiddenLayerNodes = 300;
-
-        // Initialize training examples
-        trainingInputs = new Matrix(data.inputData);
-
-        trainingOutputs = new Matrix(data.outputData);
-
-        // Initialize the network with our parameters
-        Network net = new Network(learningRate, hiddenLayerNodes, iterations, trainingInputs, trainingOutputs);
-
-        // Training network
-        net.train();
-    }
-}
-```
-
+hours to train our network. These parameters can be adjusted to your specification.
 
 # Dataset
 The dataset used for this project is free and available online [here](https://archive.ics.uci.edu/ml/datasets/Breast+Cancer+Wisconsin+(Original)).
-Thanks very much to Dr. WIlliam H. Wolberg (physician) and University of Wisconsin Hospitals.
-
-If you are wondering how the data is formatted nicely in the "Dataset" class of the untrained folder, I used regular expression magic.
-Regular expressions or RegEx for short, are wonderful short little snippets of code used to format data. They are great for finding and
-replacing characters, words etc. A great website for toying with RegEx can be found at [RegExr](https://regexr.com/).
-
-
+From University of Wisconsin Hospitals.
