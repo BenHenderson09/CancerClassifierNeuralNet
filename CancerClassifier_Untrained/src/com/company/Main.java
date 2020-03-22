@@ -1,9 +1,8 @@
 package com.company;
 
-import com.company.Matrix;
+import OML.Matrix;
 
 public class Main {
-
     public static void main(String[] args) {
         // Define hyper parameters
         double learningRate;

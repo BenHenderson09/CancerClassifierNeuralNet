@@ -1,6 +1,7 @@
 package com.company;
 
 import java.util.Arrays;
+import OML.Matrix;
 
 public class Network {
 
